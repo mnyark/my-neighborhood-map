@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 class LocationItem extends React.Component {

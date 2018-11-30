@@ -1,44 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Neighborhood-Map-React
+The Final Project for the Udacity Front-End Web Developer Track. 
+I have learned a lot from this program and I enjoyed working on every project.
 
-## Available Scripts
+This application follows the [Udacity Project Rubric](https://review.udacity.com/#!/rubrics/1351/view)
 
-In the project directory, you can run:
+## How to run the project online
+Open the online demo [here](https://mnyark.github.io/my-neighborhood-map/)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Type into the filter/search box to filter the shown locations on the map.
+2. Click on the button below the filter/search box to collapse or expand the suggestions list.
+3. Click anywhere on the map to close the information window that opens.
+4. Click on any marker to see the location details fetched from the [FourSquare APIs](https://developer.foursquare.com/).
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## How to run the project in Development Mode
+The project uses [Node.js >= 6.x](https://nodejs.org/en/) and the [Create-React-App starter code](https://github.com/facebookincubator/create-react-app).
 
-### `npm test`
+After Node is installed in your system, follow the below steps.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Navigate to the directory where you want to store the app.
+2. Clone the repo `git clone https://github.com/mnyark/my-neighborhood-map.git`
+3. Now install all modules listed as dependencies in `package.json` by running the command `npm install`
+4. Launch the app with this command `npm start`
 
-### `npm run build`
+A new browser window will open automatically displaying the app.  If it doesn't navigate to [http://localhost:3000/](http://localhost:3000/) in your browser
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+***NOTE:*** *The service workers for this app will only cache the site when it is in production mode.*
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## How to run the project in Production Mode
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Build the production ready optimised code. `npm run build`
+2. Deploy it to `gh-pages` branch by `npm run deploy`
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

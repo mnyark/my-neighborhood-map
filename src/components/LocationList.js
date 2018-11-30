@@ -1,9 +1,12 @@
+/**
+ * Created by manish on 6/1/18.
+ */
 import React, {Component} from 'react';
-import LocationItem from './location_info.js';
+import LocationItem from './LocationItem';
+import {Nav, Navbar} from 'react-bootstrap'
 
-class DBHelper extends Component{
-
-  /**
+class LocationList extends Component {
+    /**
      * Constructor
      */
     constructor(props) {
@@ -25,7 +28,7 @@ class DBHelper extends Component{
         this.props.closeInfoWindow();
         const {value} = event.target;
         var locations = [];
-        this.props.mylocations.forEach(function (location) {
+        this.props.alllocations.forEach(function (location) {
             if (location.longname.toLowerCase().indexOf(value.toLowerCase()) >= 0) {
                 location.marker.setVisible(true);
                 locations.push(location);
@@ -42,7 +45,7 @@ class DBHelper extends Component{
 
     componentWillMount() {
         this.setState({
-            'locations': this.props.mylocations
+            'locations': this.props.alllocations
         });
     }
 
@@ -59,23 +62,30 @@ class DBHelper extends Component{
      * Render function of LocationList
      */
     render() {
-        var locationlist = this.state.locations.map(function (listItem, index) {
+         var locationlist = this.state.locations.map(function (listItem, index) {
             return (
                 <LocationItem key={index} openInfoWindow={this.props.openInfoWindow.bind(this)} data={listItem}/>
             );
         }, this);
 
         return (
-            <div className="search">
+
+          <div className="search">
                 <input role="search" aria-labelledby="filter" id="search-field" className="search-field" type="text" placeholder="Filter"
                        value={this.state.query} onChange={this.filterLocations}/>
                 <ul>
-                    {this.state.suggestions && locationlist}
+                    {!this.state.suggestions && locationlist}
                 </ul>
-                <button className="button" onClick={this.toggleSuggestions}>Show/Hide Suggestions</button>
+                
+                 <button class="button" onClick={this.toggleSuggestions}> <span class= "credits"> </span></button>
+                 
             </div>
+                
+           
+        
         );
     }
+    
 }
-export default DBHelper;
 
+export default LocationList;
