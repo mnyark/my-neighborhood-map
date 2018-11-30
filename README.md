@@ -1,11 +1,10 @@
-# Neighborhood-Map-React
+# Neighborhood-Map React
 The Final Project for the Udacity Front-End Web Developer Track. 
 I have learned a lot from this program and I enjoyed working on every project.
 
 This application follows the [Udacity Project Rubric](https://review.udacity.com/#!/rubrics/1351/view)
 
-## How to run the project online
-Open the online demo [here](https://mnyark.github.io/my-neighborhood-map/)
+
 
 ## Features
 
@@ -28,8 +27,4 @@ A new browser window will open automatically displaying the app.  If it doesn't 
 
 ***NOTE:*** *The service workers for this app will only cache the site when it is in production mode.*
 
-## How to run the project in Production Mode
-
-1. Build the production ready optimised code. `npm run build`
-2. Deploy it to `gh-pages` branch by `npm run deploy`
 
