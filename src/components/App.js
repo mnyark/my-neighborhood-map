@@ -407,13 +407,13 @@ map.mapTypes.set('styled_map', styledMapType);
         return (
             
           <div>
-          <div class= "banner">
-          <h1 > The Manhattan Neighborhood</h1>
+          <div tabIndex="0" class= "banner">
+          <h1 tabIndex = "0"> The Manhattan Neighborhood</h1>
           </div>
-          <div>
+          <div tabIndex="0">
                 <LocationList key="100" alllocations={this.state.alllocations} openInfoWindow={this.openInfoWindow} closeInfoWindow={this.closeInfoWindow}/>
                 </div>
-                <div id="map">
+                <div tabIndex ="0" id="map">
                 </div>
         </div>
           
