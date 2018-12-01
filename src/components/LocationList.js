@@ -1,6 +1,4 @@
-/**
- * Created by manish on 6/1/18.
- */
+
 import React, {Component} from 'react';
 import LocationItem from './LocationItem';
 import {Nav, Navbar} from 'react-bootstrap'
@@ -73,7 +71,7 @@ class LocationList extends Component {
           <div className="search">
                 <input role="search" aria-labelledby="filter" id="search-field" className="search-field" type="text" placeholder="Filter"
                        value={this.state.query} onChange={this.filterLocations}/>
-                <ul>
+                <ul role= "list" aiara-labelledby="unordered-list">
                     {!this.state.suggestions && locationlist}
                 </ul>
                 

@@ -3,7 +3,7 @@ import LocationList from './LocationList';
 import {Nav, Navbar} from 'react-bootstrap'
 import NavSearch from './NavSearch.js'
 import HamburgerMenu from 'react-hamburger-button'
-
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 
 class App extends Component {
     /**
@@ -31,16 +31,29 @@ class App extends Component {
         this.initMap = this.initMap.bind(this);
         this.openInfoWindow = this.openInfoWindow.bind(this);
         this.closeInfoWindow = this.closeInfoWindow.bind(this);
+       
+
     }
 
+      
+
     componentDidMount() {
+         
+         
+     
         // Connect the initMap() function within this class to the global window context,
         // so Google Maps can invoke it
         window.initMap = this.initMap;
+
+        window.googleError = this.googleError;
+    // If Google map is already available, invoke the initMap()
+    if (typeof window.google === 'object' && typeof window.google.maps === 'object') {
+      this.initMap();
+    } else {
         // Asynchronously load the Google Maps script, passing in the callback reference
         loadMapJS('https://maps.googleapis.com/maps/api/js?key=AIzaSyCCbh47Eva5UditiDRVSFj13WrQ9JOprIU&callback=initMap')
     }
-
+}
     /**
      * Initialise the map once the google map script is loaded
      */
